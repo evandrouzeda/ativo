@@ -13,7 +13,7 @@ module.exports = class Mongodb {
             if (this.db === null) {
                 console.log(this.url);
                 MongoClient.connect(this.url, {
-                    maxPoolSize: 40
+                    maxPoolSize: 10
                 }, (err, db) => {
                     if(err) console.log(err);
                     if (db)
